@@ -1,0 +1,27 @@
+{% extends 'blog/blog_base.html' %}
+
+{% block title %}
+	Tag create - {{ block.super }}  
+{% endblock title %}
+
+{% block content %}
+<h2 >Create new tag: </h2>
+<form action="{% url 'tag_create_url' %}" class='m-3' method='post'>
+	{% csrf_token %}
+
+	{% for field in form %}
+		
+		<div class="form-group w-50">
+			<label for="formGroupExampleInput">{{ field.label}}: </label>
+			{{ field}}
+		</div>
+
+		{% if field.errors %}
+			<div class="alert alert-danger">{{ field.errors }}</div>
+		{% endif %}
+
+	{% endfor %}
+	
+	<button type='submit' class="btn btn-outline-secondary">Create</button>
+</form>
+{% endblock content %}

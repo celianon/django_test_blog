@@ -1,0 +1,32 @@
+{% extends 'blog/blog_base.html' %}
+
+{% block title %}
+{{ post.title|title }} - {{block.super}}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="row">
+	<div class="card">
+		<div class="card-body">
+			<h4 class="card-title">{{ post.title }}</h4>
+			<h5>
+				Tags :
+				{% for tag in post.tag.all %}
+				<a href=" {{ tag.get_absolute_url }} " class="btn btn-sm border-success btn-outline-secondary">
+					{{ tag }}
+				</a>
+				{% endfor %}
+
+			</h5>
+			<h4>
+				
+			</h4>
+			<p class="card-text">{{ post.body }}</p>
+			<span class="">Author : {{ post.author }}</span>
+		</div>
+	</div>
+</div>
+{% endblock %}

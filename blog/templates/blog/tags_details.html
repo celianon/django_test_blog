@@ -1,0 +1,19 @@
+{% extends 'blog/blog_base.html' %}
+
+{% block title %}
+	{{ tag.title|title }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+
+<h1 class="m3">
+	Posts by tag - '{{ tag }}' :
+
+</h1>
+{% for post in tag.posts.all %}
+
+{% include 'blog/includes/card.html' %}	
+
+{% endfor %}
+
+{% endblock %}

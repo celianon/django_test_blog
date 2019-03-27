@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Signup - {{block.super}}
+{% endblock title %}
+
+{% block content %}
+<h2 class="m-3">Signup:</h2>
+<div class="form_wrap">
+	<form action="{% url 'reg' %}" method="post" class="m-3">
+		{% csrf_token %}
+
+		{% for fields in form %}
+			<div class="form-group">
+			<label for="formGroupExampleInput">{{ fields.label}}: </label>
+			{{fields}}
+			</div>
+		{% endfor %}
+
+		{% if errors %}
+			<div class="alert alert-danger">{{ errors }}</div>
+		{% endif %}
+
+		<button class="btn main_button mt-3" type="submit" >Signup</button>
+	</form>
+</div>
+{% endblock content %}
