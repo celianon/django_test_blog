@@ -2,7 +2,7 @@
 My first expirience with django
 
 INSTALL VIRTUALENV >>>
-  virtualenv -p python3 envname
+  virtualenv -p python(3) envname  (for windows with out "3")
 
 INSTALL python modules >>>
   pip install -r requirements.txt
