@@ -1,13 +1,17 @@
 # django_test_blog
 My first expirience with django
 
-INSTALL VIRTUALENV >>>
-  virtualenv -p python(3) env  (for linux)
-  virtualenv -p python env  (for windows)
+<h4>Install virtualenv >>> </h4>
+<br>
+  <pre>virtualenv -p python3 env</pre>  <p>(for linux)</p>
+  <br>
+  <pre>virtualenv -p python env</pre>  <p>(for windows)</p>
 
-INSTALL python modules >>>
-  pip install -r requirements.txt
+<h4>Install python modules >>></h4>
+<br>
+  <pre>pip install -r requirements.txt</pre>
 
-INSTALL node modules for gulp >>>
-  npm install
+<h4>Install node modules for gulp >>></h4>
+<br>
+  <pre>npm install</pre>
   
