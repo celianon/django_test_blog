@@ -15,21 +15,16 @@ a:hover{
 
 .main{
 	opacity: 0.9;
-	background-color: rgba(16, 146, 33, 0.42);
+	background-color: #cbe8f4;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
 	flex-direction: row;
-	border:2px solid #0e293c;
-	border-color: #aeff9b;
+	border:2px solid #bbb;
 }
 .wrap{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -45,14 +40,13 @@ a:hover{
 	min-height: 300px;
 	margin-bottom: 1rem;
 }
+.flex{
+	display: flex;
 
+}
 body{
-	background-image: url(https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+	background-color: #EEEEEE;
     padding: 5rem;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
 	flex-direction: column;
 }
@@ -106,9 +100,9 @@ footer{
 .navbar-expand-lg {
 	position: relative;
 	width: 100%;
-	border:2px solid #798300;
+	border:2px solid #bbb;
 	z-index: 999;
-	background:#ffec00;
+	background:#0078AF;
 	opacity: 0.9;
 }
 .navbar-brand{
@@ -186,6 +180,15 @@ footer{
 .row{
 	margin-top: 1rem;
 }
+.but{
+	background: #fff;
+	color: #4ba72b;
+	margin: 1rem;
+}
+.but:hover{
+	background: #4ba72b;
+	color: #fff;
+}
 @media screen and (min-width: 1200px){
 
 	}
@@ -204,5 +207,9 @@ footer{
     }
     .login_section{
         margin: 1rem;
+    }
+    .flex{
+    	margin-top: 1rem;
+    	flex-direction: column;
     }
 }
