@@ -18,15 +18,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'o7yo95^hy3-_c*#!m+m&^nc_t=!(@17mw6p1_@s)&s27njp_v$'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['celianon.pythonanywhere.com', 'localhost']
-
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -35,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'about',
     'blog',
     'accounts'
@@ -76,30 +69,8 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'mydatabase'),
-    }
-}
 
-# DATABASES = {
-#     'default' : {
-#         'ENGINE' :'django.db.backends.mysql',
-#         'HOST' : '127.0.0.1',
-#         'NAME' : 'djangotest',
-#         'USER' : 'root',
-#         'PASSWORD' : '',
-#         'PORT' : ''
-#     }
-# }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'db.sqlite3',
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -133,13 +104,17 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/')
     # os.path.join(BASE_DIR, '/static/')
 ]
+
+try:
+    from . import local_settings
+except:
+    from . import prod_settings
