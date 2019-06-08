@@ -115,6 +115,6 @@ STATICFILES_DIRS = [
 ]
 
 try:
-    from . import local_settings
+    from .local_settings import *
 except:
-    from . import prod_settings
+    from .prod_settings import *
