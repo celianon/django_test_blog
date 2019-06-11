@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-	Blog
+	Django Blog
 	{% endblock title %}
 
 	{% block content %}
@@ -11,25 +11,19 @@
 	
 			{% if posts.has_other_pages %}
 			
-			{% include 'blog/includes/paginator.html' %}
-			
-			
+				{% include 'blog/includes/paginator.html' %}
 
 			{% endif %}
 
+				{% for post in posts %}
+				
+					{% include 'blog/includes/card.html' %}
 
-
-			{% for post in posts %}
-			
-			{% include 'blog/includes/card.html' %}
-			
-			
-
-			{% endfor %}
+				{% endfor %}
 
 			{% if posts.has_other_pages %}
-			
-			{% include 'blog/includes/paginator.html' %}
+				
+				{% include 'blog/includes/paginator.html' %}
 
 			{% endif %}
 
@@ -61,8 +55,6 @@
 	</div>
 {% endblock admin_panel %}
 
-
-<!--</div>-->
 <footer>
 	
 </footer>

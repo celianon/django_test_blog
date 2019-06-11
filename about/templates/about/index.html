@@ -1,7 +1,7 @@
 {% extends 'about/base.html' %}
 
 {% block title %}
-	About
+	About - {{block.super}}
 {% endblock %}
 
 
@@ -13,7 +13,7 @@
 	It my first django app :)
 </p>
 <p>
-Source code on Github: <a href="https://github.com/celianon/django_test_blog">github.com/celianon/django_test_blog</a></p>
+Source code on Github: <a class="btn" href="https://github.com/celianon/django_test_blog">github.com/celianon/django_test_blog</a></p>
 
 
 {% endblock %}

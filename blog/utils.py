@@ -51,7 +51,8 @@ class ObjectDeleteMixin:
 
 		obj = self.model.objects.get(slug__iexact=slug)
 		if request.user.username == obj.author or request.user.is_staff:
-			return render(request, self.template, context={self.model.__name__.lower(): obj})
+			return render(request, self.template, context={self.model.__name__.lower(): obj,
+														   'not_sidebar': True})
 		else:
 			raise PermissionDenied
 	def post(self, request, slug):

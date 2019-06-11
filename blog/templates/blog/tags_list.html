@@ -10,7 +10,7 @@
 
 {% for tag in tags %}
 <h3>
-	<a href="{{ tag.get_absolute_url }}" class="main_button border-success btn btn-light">
+	<a href="{{ tag.get_absolute_url }}" class="main_button btn">
 		{{ tag.title|title }}</a>
 </h3>
 {% endfor %}

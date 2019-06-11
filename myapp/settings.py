@@ -30,7 +30,7 @@ INSTALLED_APPS = [
 
     'about',
     'blog',
-    'accounts'
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -114,6 +114,12 @@ STATICFILES_DIRS = [
     # os.path.join(BASE_DIR, '/static/')
 ]
 
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    }
+}
 try:
     from .local_settings import *
 except:
